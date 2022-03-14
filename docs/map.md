@@ -1,4 +1,4 @@
 ---
 layout: redirect
-tourl: https://github.com/webbukkit/dynmap/wiki
+tourl: https://discord.com/channels/817003562663149578/853930897421500426
 ---
