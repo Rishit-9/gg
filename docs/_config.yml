@@ -12,7 +12,7 @@ showinSearchEngines: true
 
 # Set basic server info
 serverName: GG Network
-serverDescription: A Minecraft server where we have lots of fun!
+serverDescription: Survival Multiplayer Minecraft server.
 serverIP: ggnetworkk.aternos.me:34624
 useBedrockForOnlineStatus: true
 
