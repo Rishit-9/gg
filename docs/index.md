@@ -12,7 +12,7 @@ cellLinks:
     curl: screenshots
     cimage: media/demo03.jpg
 
-  - cname: Nothing-button
-    curl: donate
+  - cname: Videos
+    curl: videos
     cimage: media/demo04.jpg
 ---
