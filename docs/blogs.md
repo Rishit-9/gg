@@ -10,7 +10,7 @@ navname: Blogs
         {% for post in site.posts %}
         <a href="{{ site.baseurl }}{{ post.url }}" class="group block no-underline">
             <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 group-hover:shadow-green-900/20 border border-gray-700 group-hover:border-green-500">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('{{ post.image | default: "media/demo02.jpg" }}');">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('{{ site.baseurl }}/{{ post.image }}');">
                     <div class="w-full h-full bg-black opacity-20 group-hover:opacity-0 transition-opacity"></div>
                 </div>
                 
