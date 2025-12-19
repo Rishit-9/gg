@@ -4,7 +4,7 @@ navname: Home
 
 # Cells at the bottom of the page
 cellLinks:
-- cname: Blogs
+  - cname: Blogs
     curl: blogs
     cimage: media/demo02.jpg
   
