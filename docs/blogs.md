@@ -13,15 +13,16 @@ navname: Blogs
                 
                 <div class="h-48 overflow-hidden relative bg-gray-900">
                     {% if post.image %}
-                        <img src="{{ post.image | relative_url }}" 
+                        <img src="{{ site.url }}{{ site.baseurl }}/{{ post.image }}" 
                              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                             style="display: block;"
                              alt="{{ post.title }}">
                     {% else %}
-                        <div class="w-full h-full flex items-center justify-center">
-                            <span class="text-gray-500">No Image Found</span>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-700 text-gray-500">
+                            No Image Found
                         </div>
                     {% endif %}
-                    <div class="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity"></div>
                 </div>
                 
                 <div class="p-6">
@@ -41,7 +42,6 @@ navname: Blogs
 </div>
 
 <style>
-/* Keeps the text to exactly 3 lines */
 .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
