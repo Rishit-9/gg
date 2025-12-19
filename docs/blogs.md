@@ -8,10 +8,20 @@ navname: Blogs
 <div class="py-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for post in site.posts %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="group block no-underline">
+        <a href="{{ post.url | relative_url }}" class="group block no-underline">
             <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 group-hover:shadow-green-900/20 border border-gray-700 group-hover:border-green-500">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('{{ post.image | relative_url }}');">
-                    <div class="w-full h-full bg-black opacity-20 group-hover:opacity-0 transition-opacity"></div>
+                
+                <div class="h-48 overflow-hidden relative bg-gray-900">
+                    {% if post.image %}
+                        <img src="{{ post.image | relative_url }}" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                             alt="{{ post.title }}">
+                    {% else %}
+                        <div class="w-full h-full flex items-center justify-center">
+                            <span class="text-gray-500">No Image Found</span>
+                        </div>
+                    {% endif %}
+                    <div class="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity"></div>
                 </div>
                 
                 <div class="p-6">
@@ -31,7 +41,7 @@ navname: Blogs
 </div>
 
 <style>
-/* Custom utility for clamping text lines */
+/* Keeps the text to exactly 3 lines */
 .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
