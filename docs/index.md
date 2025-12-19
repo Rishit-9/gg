@@ -4,10 +4,10 @@ navname: Home
 
 # Cells at the bottom of the page
 cellLinks:
-  - cname: Server Map
-    curl: map
+- cname: Blogs
+    curl: blogs
     cimage: media/demo02.jpg
-
+  
   - cname: Screenshots
     curl: screenshots
     cimage: media/demo03.jpg
