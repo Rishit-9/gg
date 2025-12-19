@@ -9,20 +9,17 @@ navname: Blogs
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for post in site.posts %}
         <a href="{{ post.url | relative_url }}" class="group block no-underline">
-            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 group-hover:shadow-green-900/20 border border-gray-700 group-hover:border-green-500">
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 border border-gray-700 group-hover:border-green-500">
                 
-                <div class="h-48 overflow-hidden relative bg-gray-900">
+                <div class="h-48 w-full bg-gray-900">
                     {% if post.image %}
                         <img src="{{ site.url }}{{ site.baseurl }}/{{ post.image }}" 
-                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                             style="display: block;"
-                             alt="{{ post.title }}">
+                             class="w-full h-full object-cover block" 
+                             alt="{{ post.title }}"
+                             onerror="this.style.display='none';">
                     {% else %}
-                        <div class="w-full h-full flex items-center justify-center bg-gray-700 text-gray-500">
-                            No Image Found
-                        </div>
+                        <div class="w-full h-full flex items-center justify-center text-gray-500">No Image</div>
                     {% endif %}
-                    <div class="absolute inset-0 bg-black opacity-10 group-hover:opacity-0 transition-opacity"></div>
                 </div>
                 
                 <div class="p-6">
@@ -32,7 +29,7 @@ navname: Blogs
                         {{ post.excerpt | strip_html | truncatewords: 25 }}
                     </p>
                     <div class="mt-4 flex items-center text-green-500 font-bold text-sm">
-                        Read Story <span class="ml-2 transition-transform group-hover:translate-x-2">→</span>
+                        Read Story <span class="ml-2">→</span>
                     </div>
                 </div>
             </div>
